@@ -1,0 +1,58 @@
+{
+    "title": "Hisense klimatizace",
+    "config": {
+        "step": {
+            "user": {
+                "title": "Připojit k Hisense AC",
+                "description": "Chystáte se připojit vaši klimatizaci Hisense ({app_name}) k Home Assistant.\n\nID aplikace: {app_id}\n\nUjistěte se, že je vaše instance Home Assistant dostupná přes:\n{oauth_callback_url}\n\nKliknutím na ODESLAT zahájíte proces autentizace.",
+                "data": {
+                    "confirm_auth": "Ano, chci se autentizovat"
+                }
+            }
+        },
+        "abort": {
+            "already_configured": "Zařízení je již nakonfigurováno",
+            "single_instance_allowed": "Již nakonfigurováno. Povolena je pouze jedna instance.",
+            "authorize_url_fail": "Chyba při generování autorizační URL.",
+            "missing_configuration": "Komponenta není nakonfigurována. Postupujte podle dokumentace.",
+            "no_url_available": "Není k dispozici žádná URL. Informace o této chybě naleznete v [sekci nápovědy]({docs_url})",
+            "oauth_error": "Přijata neplatná data tokenu."
+        }
+    },
+    "options": {
+        "step": {
+            "init": {
+                "title": "Možnosti Hisense AC",
+                "description": "{message}",
+                "data": {
+                    "refresh_devices": "Obnovit seznam zařízení",
+                    "refresh_token": "Obnovit ověřovací token"
+                }
+            }
+        },
+        "error": {
+            "refresh_failed": "Obnovení seznamu zařízení se nezdařilo",
+            "token_refresh_failed": "Obnovení tokenu se nezdařilo"
+        },
+        "success": {
+            "device_list_refreshed": "Seznam zařízení byl obnoven",
+            "token_refreshed": "Token byl obnoven"
+        }
+    },
+    "entity": {
+        "climate": {
+            "hisense_climate": {
+                "state_attributes": {
+                    "fan_mode": {
+                        "state": {
+                            "medium_low": "Středně-nízká",
+                            "medium_high": "Středně-vysoká",
+                            "ultra_low": "Velmi nízká",
+                            "ultra_high": "Velmi vysoká"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

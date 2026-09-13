@@ -38,5 +38,21 @@
             "device_list_refreshed": "设备列表已刷新",
             "token_refreshed": "令牌已刷新"
         }
+    },
+    "entity": {
+        "climate": {
+            "hisense_climate": {
+                "state_attributes": {
+                    "fan_mode": {
+                        "state": {
+                            "medium_low": "中低",
+                            "medium_high": "中高",
+                            "ultra_low": "超低",
+                            "ultra_high": "超高"
+                        }
+                    }
+                }
+            }
+        }
     }
 }

@@ -34,5 +34,21 @@
             "refresh_failed": "Failed to refresh device list",
             "token_refresh_failed": "Failed to refresh token"
         }
+    },
+    "entity": {
+        "climate": {
+            "hisense_climate": {
+                "state_attributes": {
+                    "fan_mode": {
+                        "state": {
+                            "medium_low": "Medium-Low",
+                            "medium_high": "Medium-High",
+                            "ultra_low": "Ultra-Low",
+                            "ultra_high": "Ultra-High"
+                        }
+                    }
+                }
+            }
+        }
     }
 }

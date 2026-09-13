@@ -195,12 +195,34 @@ OPERATION_MODE_VACATION = "vacation"
 # Fan Modes
 FAN_AUTO = "auto"
 FAN_ULTRA_LOW = "ultra_low"
-SFAN_ULTRA_LOW = "中低"
+FAN_MEDIUM_LOW = "medium_low"
 FAN_LOW = "low"
 FAN_MEDIUM = "medium"
 FAN_HIGH = "high"
 FAN_ULTRA_HIGH = "ultra_high"
-SFAN_ULTRA_HIGH = "中高"
+FAN_MEDIUM_HIGH = "medium_high"
+
+# Maps every raw t_fan_speed value_map label (Chinese/English variants used across
+# devices/*.py parsers) to a canonical HA-facing fan mode string. Single source of
+# truth for both directions of translation (device -> HA and HA -> device).
+FAN_SPEED_LABEL_TO_MODE = {
+    "自动": FAN_AUTO,
+    "低风": FAN_LOW,
+    "低": FAN_LOW,
+    "中风": FAN_MEDIUM,
+    "中": FAN_MEDIUM,
+    "高风": FAN_HIGH,
+    "高": FAN_HIGH,
+    "中低": FAN_MEDIUM_LOW,
+    "中高": FAN_MEDIUM_HIGH,
+    "超低": FAN_ULTRA_LOW,
+    "超高": FAN_ULTRA_HIGH,
+}
+
+# Reverse mapping: HA fan mode -> set of raw labels that mean it.
+FAN_MODE_TO_RAW_LABELS = {}
+for _label, _mode in FAN_SPEED_LABEL_TO_MODE.items():
+    FAN_MODE_TO_RAW_LABELS.setdefault(_mode, set()).add(_label)
 
 # Message Types
 class MessageType:

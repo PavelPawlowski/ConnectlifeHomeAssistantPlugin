@@ -1,0 +1,19 @@
+{
+    "entity": {
+        "climate": {
+            "hisense_climate": {
+                "state_attributes": {
+                    "fan_mode": {
+                        "default": "mdi:fan",
+                        "state": {
+                            "ultra_low": "mdi:speedometer-slow",
+                            "medium_low": "mdi:speedometer-slow",
+                            "medium_high": "mdi:speedometer",
+                            "ultra_high": "mdi:speedometer"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

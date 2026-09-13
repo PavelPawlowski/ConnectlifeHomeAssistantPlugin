@@ -73,8 +73,8 @@ async def async_setup_entry(
                 entity = HisenseDehumidifier(coordinator, device)
                 entities.append(entity)
             else:
-                _LOGGER.warning(
-                    "Skipping unsupported device: %s-%s (%s)",
+                _LOGGER.debug(
+                    "Device %s-%s (%s) is not a dehumidifier, skipping for humidifier platform",
                     getattr(device, 'type_code', None),
                     getattr(device, 'feature_code', None),
                     getattr(device, 'name', None)

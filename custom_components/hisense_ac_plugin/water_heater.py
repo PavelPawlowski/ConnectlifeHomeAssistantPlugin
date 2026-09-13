@@ -82,8 +82,8 @@ async def async_setup_entry(
                 entity = Atw035699WaterHeater(coordinator, device)
                 entities.append(entity)
             else:
-                _LOGGER.warning(
-                    "Skipping unsupported device: %s-%s (%s)",
+                _LOGGER.debug(
+                    "Device %s-%s (%s) is not an ATW water heater, skipping for water heater platform",
                     getattr(device, 'type_code', None),
                     getattr(device, 'feature_code', None),
                     getattr(device, 'name', None)

@@ -101,7 +101,7 @@ async def async_setup_entry(
                 )
 
         if not entities:
-            _LOGGER.warning("No supported devices found")
+            _LOGGER.debug("No supported devices found")
             return
 
         _LOGGER.info("Adding %d climate entities", len(entities))

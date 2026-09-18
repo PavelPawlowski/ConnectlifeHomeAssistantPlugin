@@ -738,7 +738,7 @@ async def async_setup_entry(
                 )
 
         if not entities:
-            _LOGGER.warning("No supported sensors found")
+            _LOGGER.debug("No supported sensors found")
             return
 
         _LOGGER.info("Adding %d sensor entities", len(entities))

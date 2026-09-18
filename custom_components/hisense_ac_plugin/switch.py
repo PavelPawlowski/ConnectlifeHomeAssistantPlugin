@@ -197,7 +197,7 @@ async def async_setup_entry(
                 )
 
         if not entities:
-            _LOGGER.warning("No supported switches found")
+            _LOGGER.debug("No supported switches found")
             return
 
         _LOGGER.info("Adding %d switch entities", len(entities))
